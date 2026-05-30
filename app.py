@@ -10,7 +10,11 @@ elif year >= 1989:
     era = f"平成{year - 1988}年"
 elif year >= 1926:
     era = f"昭和{year - 1925}年"
+elif year >= 1912:
+    era = f"大正{year - 1911}年"
+elif year >= 1868:
+    era = f"明治{year - 1867}年"
 else:
-    era = "対応外"
+    era = "明治以前"
 
 st.write("和暦:", era)
