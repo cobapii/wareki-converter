@@ -34,7 +34,7 @@ if mode == "西暦→和暦":
     age = year - birth_year
 
     st.success(f"和暦：{era}")
-    st.info(f"昭和43年6月10日生まれの場合の年齢：{age}歳")
+    st.info(f"小林忍の年齢：{age}歳")
 
 # 和暦→西暦
 else:
@@ -65,4 +65,4 @@ else:
     age = year - birth_year
 
     st.success(f"西暦：{year}年")
-    st.info(f"昭和43年6月10日生まれの場合の年齢：{age}歳")
+    st.info(f"小林忍の年齢：{age}歳")
