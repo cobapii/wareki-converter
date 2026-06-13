@@ -2,6 +2,9 @@ import streamlit as st
 
 st.title("西暦⇔和暦変換")
 
+# あなたの生年月日
+birth_year = 1968
+
 mode = st.radio(
     "変換方向を選択",
     ["西暦→和暦", "和暦→西暦"]
@@ -9,6 +12,7 @@ mode = st.radio(
 
 # 西暦→和暦
 if mode == "西暦→和暦":
+
     year = st.number_input(
         "西暦を入力",
         min_value=1868,
@@ -27,10 +31,14 @@ if mode == "西暦→和暦":
     else:
         era = f"明治{year - 1867}年"
 
-    st.write("和暦:", era)
+    age = year - birth_year
+
+    st.success(f"和暦：{era}")
+    st.info(f"昭和43年6月10日生まれの場合の年齢：{age}歳")
 
 # 和暦→西暦
 else:
+
     era = st.selectbox(
         "元号を選択",
         ["令和", "平成", "昭和", "大正", "明治"]
@@ -51,7 +59,10 @@ else:
         year = wareki_year + 1925
     elif era == "大正":
         year = wareki_year + 1911
-    else:  # 明治
+    else:
         year = wareki_year + 1867
 
-    st.write("西暦:", year, "年")
+    age = year - birth_year
+
+    st.success(f"西暦：{year}年")
+    st.info(f"昭和43年6月10日生まれの場合の年齢：{age}歳")
