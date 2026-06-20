@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("西暦⇔和暦変換")
+st.title("西暦⇔和暦変換だよ")
 
 # あなたの生年月日
 birth_year = 1968
